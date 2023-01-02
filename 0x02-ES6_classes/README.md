@@ -1,75 +1,68 @@
 
-Curriculum
-Short Specializations
-Average: 175.0%
-You just released the advanced tasks of this project. Have fun!
-0x02. ES6 classes
-OOP
-JavaScript
-ES6
- By: Johann Kerbrat, Engineering Manager at Uber Works
- Weight: 1
- Project will start Dec 22, 2022 6:00 AM, must end by Dec 23, 2022 6:00 AM
- was released at Dec 22, 2022 12:00 PM
- An auto review will be launched at the deadline
+# 0x02. ES6 classes
+## OOP
+## JavaScript
+## ES6
 
+### Resources
+#### Read or watch:
 
-Resources
-Read or watch:
-
-Classes
-Metaprogramming
-Learning Objectives
+- Classes
+- Metaprogramming
+#### Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-How to define a Class
-How to add methods to a class
-Why and how to add a static method to a class
-How to extend a class from another
-Metaprogramming and symbols
-Requirements
-All your files will be executed on Ubuntu 18.04 LTS using NodeJS 12.11.x
-Allowed editors: vi, vim, emacs, Visual Studio Code
-All your files should end with a new line
-A README.md file, at the root of the folder of the project, is mandatory
-Your code should use the js extension
-Your code will be tested using Jest and the command npm run test
-Your code will be verified against lint using ESLint
-Your code needs to pass all the tests and lint. You can verify the entire project running npm run full-test
-Setup
-Install NodeJS 12.11.x
+- How to define a Class
+- How to add methods to a class
+- Why and how to add a static method to a class
+- How to extend a class from another
+- Metaprogramming and symbols
+#### Requirements
+- All your files will be executed on Ubuntu 18.04 LTS using NodeJS 12.11.x
+- Allowed editors: vi, vim, emacs, Visual Studio Code
+- All your files should end with a new line
+- A README.md file, at the root of the folder of the project, is mandatory
+- Your code should use the js extension
+- Your code will be tested using Jest and the command npm run test
+- Your code will be verified against lint using ESLint
+- Your code needs to pass all the tests and lint. You can verify the entire project running npm run full-test
+#### Setup
+- Install NodeJS 12.11.x
 (in your home directory):
 
-curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
-sudo bash nodesource_setup.sh
-sudo apt install nodejs -y
+- curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
+- sudo bash nodesource_setup.sh
+- sudo apt install nodejs -y
+```bash
 $ nodejs -v
 v12.11.1
 $ npm -v
 6.11.3
-Install Jest, Babel, and ESLint
+```
+#### Install Jest, Babel, and ESLint
 in your project directory:
 
-Install Jest using: npm install --save-dev jest
-Install Babel using: npm install --save-dev babel-jest @babel/core @babel/preset-env
-Install ESLint using: npm install --save-dev eslint
-Configuration files
-package.json
+- Install Jest using: npm install --save-dev jest
+- Install Babel using: npm install --save-dev babel-jest @babel/core @babel/preset-env
+- Install ESLint using: npm install --save-dev eslint
+#### Configuration files
+- package.json
 Click to show/hide file contents
-babel.config.js
+- babel.config.js
 Click to show/hide file contents
-.eslintrc.js
+- .eslintrc.js
 Click to show/hide file contents
 and…
-Don’t forget to run $ npm install when you have the package.json
+Don’t forget to run ```$ npm install when you have the package.json```
 
-Tasks
-0. You used to attend a place like this at some point
+## Tasks
+##### 0. You used to attend a place like this at some point
 mandatory
 Implement a class named ClassRoom:
 
 Prototype: export default class ClassRoom
 It should accept one attribute named maxStudentsSize (Number) and assigned to _maxStudentsSize
+```bash
 bob@dylan:~$ cat 0-main.js
 import ClassRoom from "./0-classroom.js";
 
@@ -79,19 +72,20 @@ console.log(room._maxStudentsSize)
 bob@dylan:~$ 
 bob@dylan:~$ npm run dev 0-main.js 
 10
-bob@dylan:~$ 
+bob@dylan:~$
+``` 
 Repo:
-
+```
 GitHub repository: alx-backend-javascript
 Directory: 0x02-ES6_classes
 File: 0-classroom.js
-   
-1. Let's make some classrooms
+```
+##### 1. Let's make some classrooms
 mandatory
 Import the ClassRoom class from 0-classroom.js.
 
 Implement a function named initializeRooms. It should return an array of 3 ClassRoom objects with the sizes 19, 20, and 34 (in this order).
-
+```bash
 bob@dylan:~$ cat 1-main.js
 import initializeRooms from './1-make_classrooms.js';
 
@@ -104,14 +98,15 @@ bob@dylan:~$ npm run dev 1-main.js
   ClassRoom { _maxStudentsSize: 20 },
   ClassRoom { _maxStudentsSize: 34 }
 ]
-bob@dylan:~$ 
+bob@dylan:~$
+``` 
 Repo:
-
+```
 GitHub repository: alx-backend-javascript
 Directory: 0x02-ES6_classes
 File: 1-make_classrooms.js
-   
-2. A Course, Getters, and Setters
+```
+##### 2. A Course, Getters, and Setters
 mandatory
 Implement a class named HolbertonCourse:
 
@@ -122,6 +117,7 @@ students (array of Strings)
 Make sure to verify the type of attributes during object creation
 Each attribute must be stored in an “underscore” attribute version (ex: name is stored in _name)
 Implement a getter and setter for each attribute.
+```bash
 bob@dylan:~$ cat 2-main.js
 import HolbertonCourse from "./2-hbtn_course.js";
 
@@ -156,14 +152,16 @@ TypeError: Name must be a string
     ...
 TypeError: Length must be a number
     ...
-bob@dylan:~$ 
+bob@dylan:~$
+``` 
 Repo:
-
+```
 GitHub repository: alx-backend-javascript
 Directory: 0x02-ES6_classes
 File: 2-hbtn_course.js
-   
-3. Methods, static methods, computed methods names..... MONEY
+```
+
+##### 3. Methods, static methods, computed methods names..... MONEY
 mandatory
 Implement a class named Currency:
 
@@ -173,6 +171,7 @@ name (String)
 Each attribute must be stored in an “underscore” attribute version (ex: name is stored in _name)
 Implement a getter and setter for each attribute.
 Implement a method named displayFullCurrency that will return the attributes in the following format name (code).
+```bash
 bob@dylan:~$ cat 3-main.js
 import Currency from "./3-currency.js";
 
@@ -182,14 +181,15 @@ console.log(dollar.displayFullCurrency());
 bob@dylan:~$ 
 bob@dylan:~$ npm run dev 3-main.js 
 Dollars ($)
-bob@dylan:~$ 
+bob@dylan:~$
+``` 
 Repo:
-
+```
 GitHub repository: alx-backend-javascript
 Directory: 0x02-ES6_classes
 File: 3-currency.js
-   
-4. Pricing
+```   
+##### 4. Pricing
 mandatory
 Import the class Currency from 3-currency.js
 
@@ -202,6 +202,7 @@ Each attribute must be stored in an “underscore” attribute version (ex: name
 Implement a getter and setter for each attribute.
 Implement a method named displayFullPrice that returns the attributes in the following format amount currency_name (currency_code).
 Implement a static method named convertPrice. It should accept two arguments: amount (Number), conversionRate (Number). The function should return the amount multiplied by the conversion rate.
+```bash
 bob@dylan:~$ cat 4-main.js
 import Pricing from './4-pricing.js';
 import Currency from './3-currency.js';
@@ -217,14 +218,15 @@ Pricing {
   _currency: Currency { _code: 'EUR', _name: 'Euro' }
 }
 100 Euro (EUR)
-bob@dylan:~$ 
+bob@dylan:~$
+``` 
 Repo:
-
+```
 GitHub repository: alx-backend-javascript
 Directory: 0x02-ES6_classes
 File: 4-pricing.js
-   
-5. A Building
+```   
+##### 5. A Building
 mandatory
 Implement a class named Building:
 
@@ -234,6 +236,7 @@ Each attribute must be stored in an “underscore” attribute version (ex: name
 Implement a getter for each attribute.
 Consider this class as an abstract class. And make sure that any class that extends from it should implement a method named evacuationWarningMessage.
 If a class that extends from it does not have a evacuationWarningMessage method, throw an error with the message Class extending Building must override evacuationWarningMessage
+```bash
 bob@dylan:~$ cat 5-main.js
 import Building from './5-building.js';
 
@@ -254,14 +257,15 @@ bob@dylan:~$ npm run dev 5-main.js
 Building { _sqft: 100 }
 Error: Class extending Building must override evacuationWarningMessage
     ...
-bob@dylan:~$ 
+bob@dylan:~$
+``` 
 Repo:
-
+```
 GitHub repository: alx-backend-javascript
 Directory: 0x02-ES6_classes
 File: 5-building.js
-   
-6. Inheritance
+```
+##### 6. Inheritance
 mandatory
 Import Building from 5-building.js.
 
@@ -273,6 +277,7 @@ floors (Number)
 Each attribute must be stored in an “underscore” attribute version (ex: name is stored in _name)
 Implement a getter for each attribute.
 Override the method named evacuationWarningMessage and return the following string Evacuate slowly the NUMBER_OF_FLOORS floors.
+```bash
 bob@dylan:~$ cat 6-main.js
 import SkyHighBuilding from './6-sky_high.js';
 
@@ -286,14 +291,15 @@ bob@dylan:~$ npm run dev 6-main.js
 140
 60
 Evacuate slowly the 60 floors
-bob@dylan:~$ 
+bob@dylan:~$
+``` 
 Repo:
-
+```
 GitHub repository: alx-backend-javascript
 Directory: 0x02-ES6_classes
 File: 6-sky_high.js
-   
-7. Airport
+```
+##### 7. Airport
 mandatory
 Implement a class named Airport:
 
@@ -302,6 +308,7 @@ name (String)
 code (String)
 Each attribute must be stored in an “underscore” attribute version (ex: name is stored in _name)
 The default string description of the class should return the airport code (example below).
+```bash
 bob@dylan:~$ cat 7-main.js
 import Airport from "./7-airport.js";
 
@@ -314,13 +321,14 @@ bob@dylan:~$ npm run dev 7-main.js
 Airport [SFO] { _name: 'San Francisco Airport', _code: 'SFO' }
 [object SFO]
 bob@dylan:~$ 
+```
 Repo:
-
+```
 GitHub repository: alx-backend-javascript
 Directory: 0x02-ES6_classes
 File: 7-airport.js
-   
-8. Primitive - Holberton Class
+```   
+##### 8. Primitive - Holberton Class
 mandatory
 Implement a class named HolbertonClass:
 
@@ -330,6 +338,7 @@ location (String)
 Each attribute must be stored in an “underscore” attribute version (ex: name is stored in _name)
 When the class is cast into a Number, it should return the size.
 When the class is cast into a String, it should return the location.
+```bash
 bob@dylan:~$ cat 8-main.js
 import HolbertonClass from "./8-hbtn_class.js";
 
@@ -341,17 +350,18 @@ bob@dylan:~$
 bob@dylan:~$ npm run dev 8-main.js 
 12
 Mezzanine
-bob@dylan:~$ 
+bob@dylan:~$
+``` 
 Repo:
-
+```
 GitHub repository: alx-backend-javascript
 Directory: 0x02-ES6_classes
 File: 8-hbtn_class.js
-   
-9. Hoisting
+```
+##### 9. Hoisting
 mandatory
 Fix this code and make it work.
-
+```javascript
 const class2019 = new HolbertonClass(2019, 'San Francisco');
 const class2020 = new HolbertonClass(2020, 'San Francisco');
 
@@ -398,8 +408,9 @@ export class StudentHolberton {
 
 
 export const listOfStudents = [student1, student2, student3, student4, student5];
+```
 Result:
-
+```bash
 bob@dylan:~$ cat 9-main.js
 import listOfStudents from "./9-hoisting.js";
 
@@ -447,14 +458,15 @@ bob@dylan:~$ npm run dev 9-main.js
   'Donald Bush - 2019 - San Francisco',
   'Jason Sandler - 2019 - San Francisco'
 ]
-bob@dylan:~$ 
+bob@dylan:~$
+```
 Repo:
-
+```
 GitHub repository: alx-backend-javascript
 Directory: 0x02-ES6_classes
 File: 9-hoisting.js
-   
-10. Vroom
+```   
+##### 10. Vroom
 mandatory
 Implement a class named Car:
 
@@ -465,7 +477,7 @@ color (String)
 Each attribute must be stored in an “underscore” attribute version (ex: name is stored in _name)
 Add a method named cloneCar. This method should return a new object of the class.
 Hint: Symbols in ES6
-
+```bash
 bob@dylan:~$ cat 10-main.js
 import Car from "./10-car.js";
 
@@ -490,13 +502,14 @@ TestCar { _brand: undefined, _motor: undefined, _color: undefined }
 true
 false
 bob@dylan:~$ 
+```
 Repo:
-
+```
 GitHub repository: alx-backend-javascript
 Directory: 0x02-ES6_classes
 File: 10-car.js
-   
-11. EVCar
+```   
+##### 11. EVCar
 #advanced
 Import Car from 10-car.js.
 
@@ -509,6 +522,7 @@ color (String)
 range (String)
 Each attribute must be stored in an “underscore” attribute version (ex: name is stored in _name)
 For privacy reasons, when cloneCar is called on a EVCar object, the object returned should be an instance of Car instead of EVCar.
+```bash
 bob@dylan:~$ cat 100-main.js
 import EVCar from './100-evcar.js';
 
@@ -527,11 +541,12 @@ EVCar {
   _range: '250'
 }
 Car { _brand: undefined, _motor: undefined, _color: undefined }
-bob@dylan:~$ 
+bob@dylan:~$
+``` 
 Repo:
-
+```
 GitHub repository: alx-backend-javascript
 Directory: 0x02-ES6_classes
 File: 100-evcar.js
-   
+```   
 Copyright © 2022 ALX, All rights reserved.
